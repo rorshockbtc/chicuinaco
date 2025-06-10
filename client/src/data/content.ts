@@ -5,7 +5,7 @@ export const restaurantInfo = {
   name: "Chicuinaco",
   fullName: "Restaurante Chicuinaco",
   location: "Teotepeque, El Salvador",
-  phone: "+503 1234-5678", // Update with actual phone number
+  phone: "+503 6446-2404",
   coordinates: {
     lat: 13.59525,
     lng: -89.51903

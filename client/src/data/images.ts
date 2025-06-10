@@ -3,7 +3,7 @@
 
 import heroViewPath from "@assets/hero-view-from-chicuinaco_1749570846060.png";
 import restaurantPath from "@assets/feature-chicuinaco-restaurant_1749570846057.png";
-import underConstructionPath from "@assets/feature-chicuinaco-under-construction_1749570846060.png";
+import underConstructionPath from "@assets/feature-chicuinaco-under-construction-new_1749573527274.png";
 import alitasPath from "@assets/menu-alitas_1749570846060.png";
 import churrascoPath from "@assets/menu-churrasco-asada_1749570846060.png";
 import tacosPath from "@assets/menu-tacos-tipicos_1749570846060.png";

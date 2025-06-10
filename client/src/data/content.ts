@@ -7,8 +7,8 @@ export const restaurantInfo = {
   location: "Teotepeque, El Salvador",
   phone: "+503 1234-5678", // Update with actual phone number
   coordinates: {
-    lat: 13.7942, // Update with actual GPS coordinates
-    lng: -89.2072
+    lat: 13.59525,
+    lng: -89.51903
   },
   hours: {
     daily: "11:00 AM - 7:30 PM"

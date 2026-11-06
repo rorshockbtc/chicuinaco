@@ -27,7 +27,7 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative h-[100svh] min-h-[640px] overflow-hidden bg-[#14120F] text-white"
+      className="relative min-h-[100svh] overflow-hidden bg-[#14120F] text-white flex flex-col justify-between"
     >
       {/* Image: fades from black, settles from a slow zoom, then parallaxes */}
       <motion.div
@@ -53,7 +53,7 @@ export default function Hero() {
       {/* Content — bottom-left editorial composition */}
       <motion.div
         style={reduce ? undefined : { y: contentY, opacity: contentOpacity }}
-        className="relative z-10 h-full max-w-[88rem] mx-auto px-5 sm:px-8 lg:px-12 flex flex-col justify-end pt-24 sm:pt-28 pb-[clamp(2.5rem,7vh,5rem)]"
+        className="relative z-10 w-full max-w-[88rem] mx-auto px-5 sm:px-8 lg:px-12 flex flex-col justify-end pt-28 sm:pt-32 pb-8 sm:pb-[clamp(2.5rem,7vh,5rem)] my-auto"
       >
         <motion.p
           initial={{ opacity: 0, y: 10 }}

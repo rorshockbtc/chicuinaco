@@ -65,11 +65,11 @@ export default function Menu() {
           </FadeIn>
         </div>
 
-        {/* Underline tab filter */}
+        {/* Underline tab filter with clean container margins */}
         <LayoutGroup>
           <div
             role="tablist"
-            className="mt-14 flex gap-6 sm:gap-10 overflow-x-auto no-scrollbar border-b border-rule -mx-5 px-5 sm:mx-0 sm:px-0"
+            className="mt-14 flex gap-6 sm:gap-10 overflow-x-auto no-scrollbar border-b border-rule pb-1"
           >
             {categories.map((c) => {
               const on = activeCategory === c.key;
@@ -191,8 +191,8 @@ export default function Menu() {
             </div>
           </div>
 
-          {/* Phone: horizontal snap strip of dish photos */}
-          <div className="lg:hidden order-1 -mx-5 px-5 flex gap-3 overflow-x-auto snap-x snap-mandatory no-scrollbar">
+          {/* Phone: horizontal snap strip of dish photos with proper container padding */}
+          <div className="lg:hidden order-1 flex gap-3 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-2">
             {filtered.map((d) => (
               <button
                 key={d.id}

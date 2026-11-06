@@ -188,14 +188,14 @@ export default function ExperiencesShowcase() {
                 </p>
               </FadeIn>
 
-              {/* Gallery strip — snap scroll on phones with safe gutter padding */}
-              <div className="mt-14 -mx-5 sm:mx-0 px-5 sm:px-0 flex sm:grid sm:grid-cols-2 gap-5 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar pb-2">
+              {/* Gallery strip — safe margin & padding on mobile phones */}
+              <div className="mt-14 flex sm:grid sm:grid-cols-2 gap-4 sm:gap-6 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar pb-2">
                 {hikeGallery.slice(1).map((g, i) => (
                   <button
                     key={i}
                     type="button"
                     onClick={() => openGallery(hikeGallery, i + 1)}
-                    className="group relative shrink-0 w-[82%] sm:w-auto snap-start text-left cursor-zoom-in first:ml-0"
+                    className="group relative shrink-0 w-[84%] sm:w-auto snap-start text-left cursor-zoom-in"
                   >
                     <RevealImage
                       src={g.src}

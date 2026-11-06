@@ -60,7 +60,7 @@ export default function Header() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 border-b ${
         overHero
-          ? "bg-transparent border-transparent"
+          ? "bg-gradient-to-b from-black/85 via-black/40 to-transparent border-transparent"
           : "bg-[color-mix(in_srgb,var(--a-bg)_86%,transparent)] backdrop-blur-xl border-rule"
       }`}
     >

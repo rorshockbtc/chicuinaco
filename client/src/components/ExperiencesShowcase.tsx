@@ -157,7 +157,7 @@ export default function ExperiencesShowcase() {
 
         <div className="relative max-w-[88rem] mx-auto px-5 sm:px-8 lg:px-12">
           {/* Headline overlaps the image's lower edge */}
-          <div className="relative -mt-24 sm:-mt-40 lg:-mt-52 bg-[#0F2A1D] before:content-[''] before:absolute before:inset-y-0 before:right-full before:w-[50vw] before:bg-[#0F2A1D] pt-10 sm:pt-14 lg:pt-16 pr-6 lg:pr-24 max-w-5xl">
+          <div className="relative -mt-24 sm:-mt-40 lg:-mt-52 bg-[#0F2A1D] sm:before:content-[''] sm:before:absolute sm:before:inset-y-0 sm:before:right-full sm:before:w-[50vw] sm:before:bg-[#0F2A1D] pt-10 sm:pt-14 lg:pt-16 px-4 sm:px-0 sm:pr-6 lg:pr-24 max-w-5xl">
             <Eyebrow index="02" light>
               {t("hiking.eyebrow")}
             </Eyebrow>
@@ -188,14 +188,14 @@ export default function ExperiencesShowcase() {
                 </p>
               </FadeIn>
 
-              {/* Gallery strip — snap scroll on phones */}
-              <div className="mt-14 -mx-5 sm:mx-0 px-5 sm:px-0 flex sm:grid sm:grid-cols-2 gap-4 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar">
+              {/* Gallery strip — snap scroll on phones with safe gutter padding */}
+              <div className="mt-14 -mx-5 sm:mx-0 px-5 sm:px-0 flex sm:grid sm:grid-cols-2 gap-5 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar pb-2">
                 {hikeGallery.slice(1).map((g, i) => (
                   <button
                     key={i}
                     type="button"
                     onClick={() => openGallery(hikeGallery, i + 1)}
-                    className="group relative shrink-0 w-[78%] sm:w-auto snap-start text-left cursor-zoom-in"
+                    className="group relative shrink-0 w-[82%] sm:w-auto snap-start text-left cursor-zoom-in first:ml-0"
                   >
                     <RevealImage
                       src={g.src}

@@ -120,21 +120,21 @@ export default function Menu() {
                         onMouseEnter={() => setActiveDish(d.id)}
                         onFocus={() => setActiveDish(d.id)}
                         onClick={() => setActiveDish(d.id)}
-                        className="group w-full text-left py-7 sm:py-8 cursor-pointer"
+                        className="group w-full text-left py-7 sm:py-8 px-1 sm:px-0 cursor-pointer"
                       >
-                        <div className="flex items-baseline gap-4">
+                        <div className="flex items-baseline gap-2 sm:gap-4 flex-wrap sm:flex-nowrap">
                           <span
-                            className={`font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.05] transition-all duration-700 ease-editorial ${
-                              on ? "text-ink italic translate-x-2" : "text-ink/80"
+                            className={`font-display text-[clamp(1.5rem,3vw,2.5rem)] leading-[1.1] transition-all duration-700 ease-editorial ${
+                              on ? "text-ink italic translate-x-1 sm:translate-x-2" : "text-ink/80"
                             }`}
                           >
                             {t(`menu.${d.id}.title`)}
                           </span>
                           <span
                             aria-hidden="true"
-                            className="flex-1 translate-y-[-0.3em] border-b border-dotted border-rule-strong"
+                            className="hidden sm:block flex-1 translate-y-[-0.3em] border-b border-dotted border-rule-strong"
                           />
-                          <span className="type-eyebrow whitespace-nowrap">
+                          <span className="type-eyebrow whitespace-nowrap ml-auto sm:ml-0">
                             {t(`menu.${d.id}.category_label`)}
                           </span>
                         </div>
@@ -149,7 +149,7 @@ export default function Menu() {
             </motion.ol>
 
             <FadeIn delay={0.1}>
-              <p className="mt-10 font-display italic text-[1.35rem] leading-[1.4] text-muted-ink max-w-[48ch]">
+              <p className="mt-10 px-1 sm:px-0 font-display italic text-[1.25rem] sm:text-[1.35rem] leading-[1.4] text-muted-ink max-w-[48ch]">
                 {t("menu.catering_note")}
               </p>
             </FadeIn>

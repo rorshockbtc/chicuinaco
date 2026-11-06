@@ -53,7 +53,7 @@ export default function Hero() {
       {/* Content — bottom-left editorial composition */}
       <motion.div
         style={reduce ? undefined : { y: contentY, opacity: contentOpacity }}
-        className="relative z-10 h-full max-w-[88rem] mx-auto px-5 sm:px-8 lg:px-12 flex flex-col justify-end pb-[clamp(2rem,6vh,4.5rem)]"
+        className="relative z-10 h-full max-w-[88rem] mx-auto px-5 sm:px-8 lg:px-12 flex flex-col justify-end pt-24 sm:pt-28 pb-[clamp(2.5rem,7vh,5rem)]"
       >
         <motion.p
           initial={{ opacity: 0, y: 10 }}

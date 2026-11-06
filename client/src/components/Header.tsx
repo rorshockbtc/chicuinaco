@@ -94,15 +94,6 @@ export default function Header() {
 
           {/* Controls */}
           <div className={`flex items-center gap-1 sm:gap-2 ${ink}`}>
-            {/* Bitcoin Accepted Badge */}
-            <div
-              title="Bitcoin Accepted Here (BTC / Lightning)"
-              className="inline-flex items-center gap-1.5 h-8 px-2.5 rounded-full text-[0.68rem] font-semibold tracking-[0.12em] uppercase border border-amber-500/40 bg-amber-500/10 text-amber-600 dark:text-amber-400 select-none mr-1"
-            >
-              <span className="font-bold text-[0.8rem] leading-none text-[#F7931A]">₿</span>
-              <span className="hidden xs:inline sm:inline">Bitcoin</span>
-            </div>
-
             <button
               type="button"
               onClick={() => openInquiryDialog("hiking")}

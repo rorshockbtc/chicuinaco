@@ -110,34 +110,51 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Drawn hairline + single stat line (single-line horizontal scroll on phones) */}
+        {/* Drawn hairline + estate pillars & Bitcoin note */}
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1.6, ease: EASE, delay: 1.9 }}
-          className="mt-10 sm:mt-14 h-px w-full bg-white/30 origin-left"
+          className="mt-8 sm:mt-12 h-px w-full bg-white/30 origin-left"
         />
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: EASE, delay: 2.3 }}
-          className="pt-5 flex items-center justify-between gap-6"
+          className="pt-5 flex flex-col md:flex-row md:items-center justify-between gap-4"
         >
-          <ul className="flex items-center gap-4 sm:gap-6 overflow-x-auto no-scrollbar whitespace-nowrap text-[0.72rem] sm:text-[0.75rem] uppercase tracking-[0.2em] text-white/80 pb-1">
-            {stats.map((s, i) => (
-              <li key={i} className="flex items-center gap-4 sm:gap-6 shrink-0">
-                <button
-                  onClick={() => scrollToSection(s.target)}
-                  className="link-underline cursor-pointer hover:text-white transition-colors"
-                >
-                  {s.label}
-                </button>
-                {i < stats.length - 1 && (
-                  <span aria-hidden="true" className="text-white/40">·</span>
-                )}
-              </li>
-            ))}
-          </ul>
+          {/* Mobile wrap / Desktop inline list */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-y-3 gap-x-6 text-[0.74rem] sm:text-[0.76rem] uppercase tracking-[0.18em] text-white/85">
+            <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
+              {stats.map((s, i) => (
+                <li key={i} className="flex items-center gap-5">
+                  <button
+                    onClick={() => scrollToSection(s.target)}
+                    className="link-underline cursor-pointer hover:text-white transition-colors text-left"
+                  >
+                    {s.label}
+                  </button>
+                  {i < stats.length - 1 && (
+                    <span aria-hidden="true" className="hidden xs:inline sm:inline text-white/40">·</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+
+            {/* Prominent Bitcoin badge underneath/beside pillars with high contrast */}
+            <div
+              onClick={() => scrollToSection("faq")}
+              className="inline-flex items-center gap-2 cursor-pointer self-start sm:self-auto py-1 px-3 rounded-full bg-[#1F1807]/80 border border-[#F7931A]/60 shadow-[0_4px_14px_rgba(247,147,26,0.25)] hover:border-[#F7931A] transition-all"
+            >
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#F7931A] text-black font-bold text-[0.75rem] leading-none shrink-0 shadow-sm">
+                ₿
+              </span>
+              <span className="text-[0.72rem] font-semibold text-[#FFD580] tracking-[0.16em] uppercase">
+                {t("hero.stat_bitcoin")}
+              </span>
+            </div>
+          </div>
+
           <button
             onClick={() => scrollToSection("story")}
             aria-label="Scroll to story"

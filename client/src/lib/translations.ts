@@ -10,7 +10,7 @@ export const translations = {
       balsamo: "Balsamo Oil",
       menu: "Our Menu",
       contact: "Visit Us",
-      reserve_cta: "Reserve / Inquire"
+      reserve_cta: "Reserve"
     },
     hero: {
       badge: "Cordillera del Bálsamo • Teotepeque, El Salvador",
@@ -23,7 +23,8 @@ export const translations = {
       stat_estate: "65 Acres (40 Manzanas)",
       stat_patio: "Up to 100 Event Guests",
       stat_hike: "3-Hr Guided Waterfall Hike",
-      stat_balsamo: "Artisanal Balsamo Oil"
+      stat_balsamo: "Artisanal Balsamo Oil",
+      stat_bitcoin: "Bitcoin Accepted Here"
     },
     story: {
       eyebrow: "Heritage & Rejuvenation",
@@ -297,7 +298,7 @@ export const translations = {
       balsamo: "Aceite de Bálsamo",
       menu: "Nuestro Menú",
       contact: "Visítanos",
-      reserve_cta: "Reservar / Consultar"
+      reserve_cta: "Reservar"
     },
     hero: {
       badge: "Cordillera del Bálsamo • Teotepeque, El Salvador",
@@ -310,7 +311,8 @@ export const translations = {
       stat_estate: "40 Manzanas (65 Acres)",
       stat_patio: "Eventos hasta 100 Personas",
       stat_hike: "Caminata Guiada de 3 Hrs",
-      stat_balsamo: "Aceite de Bálsamo Puro"
+      stat_balsamo: "Aceite de Bálsamo Puro",
+      stat_bitcoin: "Aceptamos Bitcoin Aquí"
     },
     story: {
       eyebrow: "Herencia y Renacimiento",
@@ -584,7 +586,7 @@ export const translations = {
       balsamo: "Huile de Baumier",
       menu: "Notre Menu",
       contact: "Visitez-Nous",
-      reserve_cta: "Réserver / Contact"
+      reserve_cta: "Réserver"
     },
     hero: {
       badge: "Cordillera del Bálsamo • Teotepeque, El Salvador",
@@ -597,7 +599,8 @@ export const translations = {
       stat_estate: "65 Acres (40 Manzanas)",
       stat_patio: "Patio jusqu'à 100 Invités",
       stat_hike: "Randonnée Guidée de 3h",
-      stat_balsamo: "Huile de Balsamo Artisanale"
+      stat_balsamo: "Huile de Balsamo Artisanale",
+      stat_bitcoin: "Bitcoin Accepté Ici"
     },
     story: {
       eyebrow: "Patrimoine et Renouveau",
@@ -871,7 +874,7 @@ export const translations = {
       balsamo: "Balsamo-Öl",
       menu: "Unser Menü",
       contact: "Besuchen Sie Uns",
-      reserve_cta: "Reservieren / Anfrage"
+      reserve_cta: "Reservieren"
     },
     hero: {
       badge: "Cordillera del Bálsamo • Teotepeque, El Salvador",
@@ -884,7 +887,8 @@ export const translations = {
       stat_estate: "65 Acres (40 Manzanas)",
       stat_patio: "Events bis 100 Gäste",
       stat_hike: "3-Std. Wasserfall-Tour",
-      stat_balsamo: "Reines Balsamo-Öl"
+      stat_balsamo: "Reines Balsamo-Öl",
+      stat_bitcoin: "Bitcoin Hier Akzeptiert"
     },
     story: {
       eyebrow: "Tradition & Erneuerung",

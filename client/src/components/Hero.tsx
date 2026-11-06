@@ -70,14 +70,14 @@ export default function Hero() {
         </h1>
 
         <div className="mt-6 sm:mt-8 grid lg:grid-cols-12 gap-6 lg:gap-10 items-end">
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 notranslate" translate="no">
             <RevealText
               as="p"
               text={t("hero.subtitle")}
               immediate
               delay={1.15}
               stagger={0.04}
-              className="font-display italic font-light text-[clamp(1.6rem,3.4vw,2.75rem)] leading-[1.1] text-white/95"
+              className="font-display italic font-light text-[clamp(1.6rem,3.4vw,2.75rem)] leading-[1.1] text-white/95 notranslate"
             />
             <motion.p
               initial={{ opacity: 0, y: 10 }}

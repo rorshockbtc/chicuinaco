@@ -110,7 +110,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Drawn hairline + single stat line (replaces the 4 stat cards) */}
+        {/* Drawn hairline + single stat line (single-line horizontal scroll on phones) */}
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
@@ -123,9 +123,9 @@ export default function Hero() {
           transition={{ duration: 1.2, ease: EASE, delay: 2.3 }}
           className="pt-5 flex items-center justify-between gap-6"
         >
-          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-[0.72rem] sm:text-[0.75rem] uppercase tracking-[0.2em] text-white/80">
+          <ul className="flex items-center gap-4 sm:gap-6 overflow-x-auto no-scrollbar whitespace-nowrap text-[0.72rem] sm:text-[0.75rem] uppercase tracking-[0.2em] text-white/80 pb-1">
             {stats.map((s, i) => (
-              <li key={i} className="flex items-center gap-6">
+              <li key={i} className="flex items-center gap-4 sm:gap-6 shrink-0">
                 <button
                   onClick={() => scrollToSection(s.target)}
                   className="link-underline cursor-pointer hover:text-white transition-colors"
@@ -133,7 +133,7 @@ export default function Hero() {
                   {s.label}
                 </button>
                 {i < stats.length - 1 && (
-                  <span aria-hidden="true" className="hidden sm:inline text-white/40">·</span>
+                  <span aria-hidden="true" className="text-white/40">·</span>
                 )}
               </li>
             ))}

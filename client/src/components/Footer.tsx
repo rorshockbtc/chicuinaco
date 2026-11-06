@@ -33,12 +33,12 @@ export default function Footer() {
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-12 gap-12 border-t border-[#EDE6DA]/15 pt-12">
           <nav className="lg:col-span-6">
             <p className="type-eyebrow !text-[#8F8576]">{t("footer.quick_links")}</p>
-            <ul className="mt-5 grid grid-cols-2 gap-x-8 gap-y-3">
+            <ul className="mt-5 flex flex-col sm:grid sm:grid-cols-2 gap-y-3 sm:gap-x-8">
               {links.map((l) => (
                 <li key={l.id}>
                   <button
                     onClick={() => scrollToSection(l.id)}
-                    className="link-underline font-display text-[1.4rem] text-[#EDE6DA] cursor-pointer"
+                    className="link-underline font-display text-[1.4rem] text-[#EDE6DA] text-left cursor-pointer"
                   >
                     {l.label}
                   </button>

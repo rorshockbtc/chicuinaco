@@ -1,29 +1,130 @@
-// Central image management system using provided assets
-// Authentic images from Restaurante Chicuinaco
+// Central image & media management system using enhanced WebP assets from Chicuinaco
 
-import heroViewPath from "@assets/hero-view-from-chicuinaco_1749570846060.png";
-import restaurantPath from "@assets/feature-chicuinaco-restaurant_1749570846057.png";
-import underConstructionPath from "@assets/feature-chicuinaco-under-construction-new_1749573527274.png";
-import alitasPath from "@assets/menu-alitas_1749570846060.png";
-import churrascoPath from "@assets/menu-churrasco-asada_1749570846060.png";
-import tacosPath from "@assets/menu-tacos-tipicos_1749570846060.png";
-import burgerPath from "@assets/menu-hamburguesa-papas-fritas_1749570846060.png";
-import hotdogPath from "@assets/menu-hot-dog-papas-fritas_1749570846060.png";
-import yucaPath from "@assets/menu-yuca-frita_1749570846060.png";
-import diningViewPath from "@assets/view-from-dining-area_1749570846060.png";
+import heroViewPath from "@assets/enhanced/hero-sunset-valley.webp";
+import restaurantPath from "@assets/enhanced/restaurant-exterior.webp";
+import underConstructionPath from "@assets/enhanced/hacienda-arches.webp";
+import alitasPath from "@assets/enhanced/menu-alitas.webp";
+import churrascoPath from "@assets/enhanced/menu-churrasco-asada.webp";
+import tacosPath from "@assets/enhanced/menu-tacos-tipicos.webp";
+import burgerPath from "@assets/enhanced/menu-hamburguesa-papas-fritas.webp";
+import hotdogPath from "@assets/enhanced/menu-hot-dog-papas-fritas.webp";
+import yucaPath from "@assets/enhanced/menu-yuca-frita.webp";
+import diningViewPath from "@assets/enhanced/view-from-dining-area.webp";
+
+// Waterfall Hiking assets (65 acres / 40 manzanas)
+import waterfallTrailPath from "@assets/enhanced/waterfall-trail-valley.webp";
+import waterfallCascadePath from "@assets/enhanced/waterfall-cascade-pools.webp";
+import waterfallHikersPath from "@assets/enhanced/waterfall-hikers-climb.webp";
+
+// Covered Patio Event Venue assets (up to 100 guests)
+import eventCoveredPatioPath from "@assets/enhanced/event-covered-patio-banquet.webp";
+import eventLargeViewPath from "@assets/enhanced/view-event-large.webp";
+import eventBabyShowerPath from "@assets/enhanced/view-event-baby-shower.webp";
+
+// Hacienda Suite & Room assets (up to 8 guests)
+import roomPrimaryPath from "@assets/enhanced/room-primary-bedroom.webp";
+import roomTriplePath from "@assets/enhanced/room-second-bedroom-triple.webp";
+import roomLivingRoomPath from "@assets/enhanced/room-living-room-suite.webp";
+import roomBathroomPath from "@assets/enhanced/room-shared-bathroom.webp";
+
+// Balsamo Oil Production videos (Balsam Mountain Range)
+import balsamoPressWideVideo from "@assets/balsamo-timber-press-wide.mp4";
+import balsamoExtractionCloseVideo from "@assets/balsamo-extraction-closeup.mp4";
+import balsamoPressPosterPath from "@assets/enhanced/balsamo-press-poster.webp";
+import balsamoExtractionPosterPath from "@assets/enhanced/balsamo-extraction-poster.webp";
 
 export const images = {
   hero: {
     main: heroViewPath,
-    alt: "Panoramic view from Chicuinaco showing beautiful Salvadoran valley and mountains"
+    alt: "Panoramic sunset view from Chicuinaco showing the Balsam Mountain Range and valley in Teotepeque"
   },
   story: {
     hacienda: underConstructionPath,
-    alt: "Hacienda Chicuinaco under construction with green trim and covered seating area"
+    restaurant: restaurantPath,
+    alt: "Hacienda Chicuinaco with signature emerald-green arches and covered patio"
+  },
+  accommodation: {
+    cover: underConstructionPath,
+    primaryBedroom: roomPrimaryPath,
+    secondBedroom: roomTriplePath,
+    livingRoom: roomLivingRoomPath,
+    bathroom: roomBathroomPath,
+    gallery: [
+      {
+        src: roomLivingRoomPath,
+        alt: "Private living room included with the Hacienda suite with arch window and seating",
+        captionKey: "accommodation.caption_living"
+      },
+      {
+        src: roomPrimaryPath,
+        alt: "Primary bedroom with double bed and rocking chair at Hacienda Chicuinaco",
+        captionKey: "accommodation.caption_primary"
+      },
+      {
+        src: roomTriplePath,
+        alt: "Spacious second bedroom featuring 3 double beds accommodating families or groups",
+        captionKey: "accommodation.caption_triple"
+      },
+      {
+        src: roomBathroomPath,
+        alt: "Clean shared full bathroom with walk-in shower and natural stone tile",
+        captionKey: "accommodation.caption_bathroom"
+      }
+    ]
   },
   restaurant: {
     main: restaurantPath,
-    alt: "Restaurante Chicuinaco exterior with modern covered structure"
+    alt: "Restaurante Chicuinaco exterior with covered seating and green lawn"
+  },
+  hiking: {
+    main: waterfallHikersPath,
+    cascade: waterfallCascadePath,
+    trail: waterfallTrailPath,
+    gallery: [
+      {
+        src: waterfallHikersPath,
+        alt: "Adventurers climbing the multi-tiered waterfall at the bottom of the Chicuinaco valley",
+        captionKey: "hiking.caption_climb"
+      },
+      {
+        src: waterfallCascadePath,
+        alt: "Crystal-clear cascading waterfall and natural rock pools at Chicuinaco",
+        captionKey: "hiking.caption_pools"
+      },
+      {
+        src: waterfallTrailPath,
+        alt: "Lush jungle river trail leading to the Chicuinaco waterfall",
+        captionKey: "hiking.caption_trail"
+      }
+    ]
+  },
+  events: {
+    main: eventCoveredPatioPath,
+    banquetValley: eventLargeViewPath,
+    celebrationArch: eventBabyShowerPath,
+    gallery: [
+      {
+        src: eventCoveredPatioPath,
+        alt: "Large covered arched patio at Chicuinaco set with banquet tables and chairs for up to 100 guests",
+        captionKey: "events.caption_banquet"
+      },
+      {
+        src: eventLargeViewPath,
+        alt: "Covered patio event setup with red table linens overlooking the Teotepeque mountain valley",
+        captionKey: "events.caption_valley"
+      },
+      {
+        src: eventBabyShowerPath,
+        alt: "Custom party decoration and balloon arch on the covered terrace at Chicuinaco",
+        captionKey: "events.caption_celebration"
+      }
+    ]
+  },
+  balsamo: {
+    videoWide: balsamoPressWideVideo,
+    videoClose: balsamoExtractionCloseVideo,
+    posterWide: balsamoPressPosterPath,
+    posterClose: balsamoExtractionPosterPath
   },
   menu: {
     alitas: alitasPath,
@@ -35,14 +136,13 @@ export const images = {
   },
   contact: {
     view: diningViewPath,
-    alt: "Beautiful view from restaurant dining area showing lush green valley and mountains"
+    alt: "Breathtaking view from the Chicuinaco dining area overlooking the lush valley and Cordillera del Bálsamo"
   }
 };
 
-// Image optimization settings
 export const imageSettings = {
   hero: {
-    sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw",
+    sizes: "100vw",
     priority: true
   },
   menu: {
@@ -50,7 +150,7 @@ export const imageSettings = {
     priority: false
   },
   story: {
-    sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw", 
+    sizes: "(max-width: 768px) 100vw, 50vw",
     priority: false
   }
 };

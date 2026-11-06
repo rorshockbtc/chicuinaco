@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://chicuinaco.com/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chicuinaco.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://chicuinaco.com/?lang=es" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chicuinaco.com/?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://chicuinaco.com/?lang=de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chicuinaco.com/" />
+    <image:image>
+      <image:loc>https://chicuinaco.com/og-image.jpg</image:loc>
+      <image:title>Hacienda, Restaurante &amp; Eco-Estate Chicuinaco</image:title>
+      <image:caption>Sunset mountain valley view from the covered dining patio at Chicuinaco in Teotepeque, El Salvador</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://chicuinaco.com/og-hiking.jpg</image:loc>
+      <image:title>Waterfall Hike &amp; Natural Pools</image:title>
+      <image:caption>Guided 65-acre waterfall hike and natural river swimming pools at Chicuinaco</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://chicuinaco.com/og-events.jpg</image:loc>
+      <image:title>Event Venue Patio at Chicuinaco</image:title>
+      <image:caption>100-person covered event patio overlooking the Cordillera del Bálsamo</image:caption>
+    </image:image>
+  </url>
+</urlset>

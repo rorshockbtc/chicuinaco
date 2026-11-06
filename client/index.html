@@ -1,26 +1,140 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth scroll-pt-20">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Restaurante Chicuinaco - Hacienda & Restaurante | Teotepeque, El Salvador</title>
-    <meta name="description" content="Experience authentic Salvadoran cuisine with breathtaking valley views at Restaurante Chicuinaco in Teotepeque. Restaurant, event venue, and hacienda accommodations." />
-    
-    <!-- Open Graph tags -->
-    <meta property="og:title" content="Restaurante Chicuinaco - Authentic Salvadoran Cuisine" />
-    <meta property="og:description" content="Experience authentic Salvadoran cuisine with breathtaking valley views in Teotepeque, El Salvador." />
-    <meta property="og:type" content="restaurant" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chicuinaco — Hacienda, Restaurante, Waterfall Hikes & Balsamo Oil | Teotepeque, El Salvador</title>
+    <meta name="description" content="Experience authentic Salvadoran cuisine, a 100-person covered event patio, guided 65-acre waterfall hikes, Hacienda stays, and artisanal Balsamo oil production in the Balsam Mountain Range of Teotepeque, El Salvador." />
+    <meta name="keywords" content="Chicuinaco, Hacienda Chicuinaco, Restaurante Chicuinaco, Teotepeque, El Salvador, Balsamo Oil, Cordillera del Bálsamo, Waterfall Hike El Salvador, Event Venue Teotepeque, Eco Tourism El Salvador" />
+    <meta name="author" content="Hacienda & Restaurante Chicuinaco" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://chicuinaco.com" />
+    <link rel="alternate" hreflang="en" href="https://chicuinaco.com" />
+    <link rel="alternate" hreflang="es" href="https://chicuinaco.com?lang=es" />
+    <link rel="alternate" hreflang="fr" href="https://chicuinaco.com?lang=fr" />
+    <link rel="alternate" hreflang="de" href="https://chicuinaco.com?lang=de" />
+    <link rel="alternate" hreflang="x-default" href="https://chicuinaco.com" />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="theme-color" content="#14120F" />
+
+    <!-- Open Graph tags (Facebook, WhatsApp, iMessage, LinkedIn, Telegram) -->
+    <meta property="og:site_name" content="Chicuinaco" />
+    <meta property="og:title" content="Chicuinaco — Hacienda, Restaurante & Eco-Estate | Teotepeque, El Salvador" />
+    <meta property="og:description" content="65-acre mountain estate on the Balsam Mountain Range. Authentic Salvadoran dining, 100-guest covered patio events, guided waterfall canyon hikes, and artisanal Bálsamo oil production." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://chicuinaco-website.vercel.app" />
     <meta property="og:locale" content="en_US" />
-    
+    <meta property="og:locale:alternate" content="es_SV" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:image" content="https://chicuinaco-website.vercel.app/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://chicuinaco-website.vercel.app/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Chicuinaco sunset mountain valley view from the covered dining patio in Teotepeque, El Salvador" />
+
+    <!-- Twitter Card tags (X, Slack, Threads) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chicuinaco — Hacienda, Restaurante & Eco-Estate" />
+    <meta name="twitter:description" content="65-acre mountain estate in Teotepeque, El Salvador: authentic Salvadoran dining, 100-guest covered patio, guided waterfall hikes, and artisanal Balsamo oil." />
+    <meta name="twitter:image" content="https://chicuinaco-website.vercel.app/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Chicuinaco sunset mountain valley view" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500;700&family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Lavishly+Yours&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (Restaurant + TouristAttraction + EventVenue + BreadcrumbList) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://chicuinaco.com/#website",
+            "url": "https://chicuinaco.com",
+            "name": "Chicuinaco",
+            "description": "Hacienda, Restaurante & Eco-Estate in Teotepeque, El Salvador",
+            "inLanguage": ["en-US", "es-SV", "fr-FR", "de-DE"]
+          },
+          {
+            "@type": ["Restaurant", "EventVenue", "TouristAttraction"],
+            "@id": "https://chicuinaco.com/#place",
+            "name": "Hacienda & Restaurante Chicuinaco",
+            "alternateName": "Chicuinaco",
+            "description": "65-acre (40 manzanas) estate on the Balsam Mountain Range in Teotepeque, El Salvador featuring a Salvadoran & American restaurant, 100-person covered event patio, two-bedroom Hacienda suite, guided waterfall hikes, and artisanal Balsamo oil production.",
+            "url": "https://chicuinaco.com",
+            "telephone": "+503 6446-2404",
+            "image": "https://chicuinaco.com/og-image.jpg",
+            "logo": "https://chicuinaco.com/favicon-512x512.png",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Teotepeque",
+              "addressRegion": "La Libertad",
+              "addressCountry": "SV"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 13.59525,
+              "longitude": -89.51903
+            },
+            "hasMap": "https://maps.google.com/?q=13.59525,-89.51903",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "11:00",
+                "closes": "19:30"
+              }
+            ],
+            "servesCuisine": ["Salvadoran", "Regional", "American"],
+            "maximumAttendeeCapacity": 100,
+            "amenityFeature": [
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Guided 3-Hour Waterfall Hike & Canyon River Swimming",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "100-Person Covered Patio Event Venue",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Artisanal Sacred Bálsamo Oil Production & Tours",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "2-Bedroom Hacienda Suite Stays",
+                "value": true
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
-    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
   </body>
 </html>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="violetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4C1D95" />
+      <stop offset="50%" stop-color="#581C87" />
+      <stop offset="100%" stop-color="#2E1065" />
+    </linearGradient>
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  
+  <!-- Smooth rounded square container -->
+  <rect width="64" height="64" rx="16" fill="url(#violetGrad)" />
+  
+  <!-- Subtle inner border highlight -->
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+
+  <!-- Script C letter styled after Lavishly Yours / Cormorant flourish -->
+  <!-- Warm sandstone / ivory gold accent color #F5EFEB matching Accént design system -->
+  <text 
+    x="31" 
+    y="46" 
+    text-anchor="middle" 
+    font-family="'Lavishly Yours', 'Cormorant Garamond', 'Great Vibes', 'Brush Script MT', cursive, serif" 
+    font-size="44" 
+    font-weight="400" 
+    font-style="italic" 
+    fill="#F5EFEB" 
+    filter="url(#subtleGlow)">
+    C
+  </text>
+</svg>

@@ -1,87 +1,150 @@
 import { useLanguage } from "./LanguageProvider";
 import { images } from "../data/images";
-import { restaurantInfo } from "../data/content";
-import { MapPin, Clock, Phone } from "lucide-react";
+import {
+  restaurantInfo,
+  getWhatsAppUrl,
+  getPhoneUrl,
+  getGoogleMapsUrl
+} from "../data/content";
+import { openInquiryDialog } from "@/lib/scroll";
+import { Eyebrow, FadeIn, Hairline, RevealImage, RevealText } from "./motion";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Contact() {
   const { t } = useLanguage();
+  const title = t("contact.title");
+
+  const rows = [
+    {
+      label: t("contact.location.title"),
+      body: (
+        <>
+          <p className="font-display text-[1.6rem] leading-[1.15] text-ink">
+            {t("contact.location.address")}
+          </p>
+          <p className="mt-1 text-[0.9375rem] text-ink-soft">{t("contact.location.range")}</p>
+          <p className="mt-1 text-[0.8125rem] text-muted-ink tabular-nums">
+            {t("contact.location.coordinates")}
+          </p>
+          <a
+            href={getGoogleMapsUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-2 text-[0.75rem] font-semibold uppercase tracking-[0.2em] text-ink"
+          >
+            <span className="link-underline-static">{t("contact.location.directions")}</span>
+            <ArrowUpRight className="w-4 h-4" strokeWidth={1.5} />
+          </a>
+        </>
+      )
+    },
+    {
+      label: t("contact.hours.title"),
+      body: (
+        <>
+          <p className="font-display text-[1.6rem] leading-[1.15] text-ink">
+            {t("contact.hours.daily")}
+          </p>
+          <p className="mt-2 text-[0.9375rem] leading-[1.65] text-ink-soft max-w-[46ch]">
+            {t("contact.hours.appointments")}
+          </p>
+        </>
+      )
+    }
+  ];
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-neutral-800 dark:bg-neutral-900 text-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
-            {t('contact.title')}
-          </h2>
-          <p className="text-xl text-neutral-300">
-            {t('contact.subtitle')}
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Location */}
-          <div className="text-center">
-            <div className="w-12 h-12 bg-primary-blue/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <MapPin className="w-6 h-6 text-primary-blue" />
-            </div>
-            <h3 className="font-playfair text-xl font-bold mb-2">
-              {t('contact.location.title')}
-            </h3>
-            <p className="text-neutral-300 mb-2">
-              {t('contact.location.address')}
-            </p>
-            <a 
-              href={`https://maps.google.com/?q=${restaurantInfo.coordinates.lat},${restaurantInfo.coordinates.lng}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary-blue hover:text-primary-blue-light transition-colors text-sm"
-            >
-              {t('contact.location.directions')}
-            </a>
-          </div>
-
-          {/* Hours */}
-          <div className="text-center">
-            <div className="w-12 h-12 bg-primary-blue/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Clock className="w-6 h-6 text-primary-blue" />
-            </div>
-            <h3 className="font-playfair text-xl font-bold mb-2">
-              {t('contact.hours.title')}
-            </h3>
-            <p className="text-neutral-300">
-              {t('contact.hours.daily')}
-            </p>
-          </div>
-
-          {/* Phone */}
-          <div className="text-center">
-            <div className="w-12 h-12 bg-primary-blue/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Phone className="w-6 h-6 text-primary-blue" />
-            </div>
-            <h3 className="font-playfair text-xl font-bold mb-2">
-              {t('contact.phone.title')}
-            </h3>
-            <a 
-              href={`tel:${restaurantInfo.phone}`}
-              className="text-neutral-300 hover:text-primary-blue transition-colors"
-            >
-              {restaurantInfo.phone}
-            </a>
-          </div>
-        </div>
-        
-        {/* View Section */}
-        <div className="mt-16 text-center">
-          <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto">
-            <img 
-              src={images.contact.view}
-              alt={images.contact.alt}
-              className="w-full h-64 md:h-80 object-cover" 
+    <section id="contact" className="relative section-pad bg-paper-alt overflow-hidden">
+      <div className="max-w-[88rem] mx-auto px-5 sm:px-8 lg:px-12">
+        <div className="grid lg:grid-cols-12 gap-16 lg:gap-20">
+          {/* Type block */}
+          <div className="lg:col-span-6">
+            <Eyebrow index="07">{t("contact.eyebrow")}</Eyebrow>
+            <RevealText
+              as="h2"
+              text={title}
+              italicWords={[title.split(" ").length - 1]}
+              className="type-h2 text-ink mt-8"
             />
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <p className="text-white font-playfair text-2xl md:text-3xl font-bold text-center px-4">
-                {t('contact.view.text')}
-              </p>
+            <FadeIn delay={0.15}>
+              <p className="type-body mt-6">{t("contact.subtitle")}</p>
+            </FadeIn>
+
+            {/* Phone as the hero of the block */}
+            <FadeIn delay={0.2}>
+              <div className="mt-12">
+                <p className="type-eyebrow">{t("contact.phone.title")}</p>
+                <a
+                  href={getPhoneUrl()}
+                  className="mt-3 inline-block font-display font-light text-[clamp(2.75rem,6vw,4.75rem)] leading-none text-ink tabular-nums link-underline"
+                >
+                  {restaurantInfo.phone}
+                </a>
+                <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3 sm:items-center">
+                  <button
+                    type="button"
+                    onClick={() => openInquiryDialog("hiking")}
+                    className="btn-primary cursor-pointer"
+                  >
+                    {t("concierge.title")}
+                  </button>
+                  <a
+                    href={getWhatsAppUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center h-14 px-6 border border-rule rounded-full text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-ink hover:border-ink transition-colors"
+                  >
+                    {t("contact.phone.whatsapp_label")}
+                  </a>
+                  <a
+                    href={getPhoneUrl()}
+                    className="inline-flex items-center justify-center h-14 px-4 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-ink"
+                  >
+                    <span className="link-underline-static">{t("contact.phone.call_label")}</span>
+                  </a>
+                  <a
+                    href={restaurantInfo.social.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center h-14 px-4 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-ink"
+                  >
+                    <span className="link-underline-static">Facebook</span>
+                  </a>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Details as hairline rows */}
+            <div className="mt-16">
+              {rows.map((r, i) => (
+                <div key={i}>
+                  <Hairline delay={0.08 * i} />
+                  <FadeIn delay={0.08 * i}>
+                    <div className="grid sm:grid-cols-[10rem_1fr] gap-3 sm:gap-8 py-8">
+                      <p className="type-eyebrow pt-2">{r.label}</p>
+                      <div>{r.body}</div>
+                    </div>
+                  </FadeIn>
+                </div>
+              ))}
+              <Hairline />
+            </div>
+          </div>
+
+          {/* View + quote */}
+          <div className="lg:col-span-6">
+            <div className="lg:sticky lg:top-28">
+              <RevealImage
+                src={images.contact.view}
+                alt={images.contact.alt}
+                parallax={30}
+                className="aspect-[4/5] w-full"
+              />
+              <FadeIn delay={0.2}>
+                <blockquote className="mt-8 type-quote text-ink max-w-[22ch]">
+                  “{t("contact.view.text")}”
+                </blockquote>
+              </FadeIn>
             </div>
           </div>
         </div>

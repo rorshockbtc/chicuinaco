@@ -10,11 +10,11 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem("chicuinaco-theme") as Theme;
+    // Check for saved theme preference or default to light (sandstone paper)
+    const savedTheme = localStorage.getItem("chicuinaco-theme-v2") as Theme;
     if (savedTheme) {
       setTheme(savedTheme);
     }
@@ -29,7 +29,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
     
     // Save theme preference
-    localStorage.setItem("chicuinaco-theme", theme);
+    localStorage.setItem("chicuinaco-theme-v2", theme);
   }, [theme]);
 
   const toggleTheme = () => {

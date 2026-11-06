@@ -1,11 +1,13 @@
-// Central content management file for easy editing by non-technical users
-// To update content, simply modify the values in this file
-
+// Central content management file for easy editing
 export const restaurantInfo = {
   name: "Chicuinaco",
-  fullName: "Restaurante Chicuinaco",
-  location: "Teotepeque, El Salvador",
+  fullName: "Hacienda & Restaurante Chicuinaco",
+  pronunciation: "Chee-quee-nacco",
+  location: "Teotepeque, La Libertad, El Salvador",
+  mountainRange: "Cordillera del Bálsamo (Balsam Mountain Range)",
+  plusCode: "765GHFWJ+39",
   phone: "+503 6446-2404",
+  phoneClean: "50364462404",
   coordinates: {
     lat: 13.59525,
     lng: -89.51903
@@ -13,10 +15,23 @@ export const restaurantInfo = {
   hours: {
     daily: "11:00 AM - 7:30 PM"
   },
+  estate: {
+    acres: 65,
+    manzanas: 40,
+    hikeDurationHours: 3,
+    waterfallPoolMinutes: 30
+  },
   capacity: {
     restaurant: 50,
     events: 100,
-    accommodation: 6
+    accommodation: 8,
+    bedrooms: 2,
+    beds: "4 double beds (1 in first bedroom, 3 in second)",
+    bathrooms: "1 shared bathroom + living room"
+  },
+  social: {
+    facebook: "https://www.facebook.com/profile.php?id=61558176405317",
+    facebookName: "Comedor Chicuinaco"
   }
 };
 
@@ -27,13 +42,18 @@ export const menuItems = [
     category: "specialties"
   },
   {
-    id: "churrasco", 
+    id: "churrasco",
     name: "Churrasco Asada",
     category: "grilled"
   },
   {
     id: "tacos",
-    name: "Tacos Típicos", 
+    name: "Tacos Típicos",
+    category: "traditional"
+  },
+  {
+    id: "yuca",
+    name: "Yuca Frita",
     category: "traditional"
   },
   {
@@ -45,18 +65,25 @@ export const menuItems = [
     id: "hotdog",
     name: "Hot Dog Especial",
     category: "american"
-  },
-  {
-    id: "yuca",
-    name: "Yuca Frita",
-    category: "traditional"
   }
 ];
 
-// Easy way to update social media links and contact info
 export const contactInfo = {
-  email: "info@chicuinaco.com", // Update with actual email
-  facebook: "", // Update with actual Facebook page
-  instagram: "", // Update with actual Instagram
-  whatsapp: "+50312345678" // Update with actual WhatsApp number
+  email: "restaurantechicuinaco@gmail.com",
+  whatsapp: "50364462404",
+  phoneDisplay: "+503 6446-2404"
 };
+
+export function getWhatsAppUrl(customMessage?: string): string {
+  const base = `https://wa.me/${contactInfo.whatsapp}`;
+  if (!customMessage) return base;
+  return `${base}?text=${encodeURIComponent(customMessage)}`;
+}
+
+export function getPhoneUrl(): string {
+  return `tel:+${contactInfo.whatsapp}`;
+}
+
+export function getGoogleMapsUrl(): string {
+  return `https://maps.google.com/?q=${restaurantInfo.coordinates.lat},${restaurantInfo.coordinates.lng}`;
+}
